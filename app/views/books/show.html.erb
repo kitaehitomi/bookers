@@ -1,0 +1,22 @@
+
+  <p></p>
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+  <p></p>
+  
+  
+  Title:
+  <span><%= @book.title %></span>
+  <p></p>
+  Body:
+  <span><%= @book.body %></span>
+  <p></p>
+  
+  <span>
+    <%= link_to "Edit", "/books/#{@book.id}/edit" %>
+  </span>|
+  <span>
+    <%= link_to "Back", "/books" %>
+  </span>
+  
